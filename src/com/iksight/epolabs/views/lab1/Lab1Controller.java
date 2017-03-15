@@ -35,7 +35,7 @@ public class Lab1Controller {
             try {
                 FileWorker.update(FileWorker.getFile(), i);
             } catch (FileNotFoundException e) {
-                System.out.println("Такого файла не существует!");
+                System.out.println("File not found!");
             }
         }
 
@@ -51,7 +51,7 @@ public class Lab1Controller {
         try {
             FileWorker.write(FileWorker.getFile(), builder.toString());
         } catch (FileNotFoundException e) {
-            System.out.println("Такого файла не существует!");
+            System.out.println("File not found!");
         }
         measure(3);
 
