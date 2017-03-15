@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EPO_Lab1.iml" filepath="$PROJECT_DIR$/EPO_Lab1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EPO_Labs.iml" filepath="$PROJECT_DIR$/EPO_Labs.iml" />
     </modules>
   </component>
 </project>

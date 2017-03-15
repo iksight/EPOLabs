@@ -2,7 +2,6 @@ package com.iksight.epolabs.views.lab1;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 import java.text.DecimalFormat;
@@ -15,18 +14,19 @@ public class Lab1Controller {
     private long[] measures = new long[4];
 
     @FXML
-    public Label oldWTimeLabel;
+    private Label oldWTimeLabel;
 
     @FXML
-    public Label newWTimeLabel;
+    private Label newWTimeLabel;
 
     @FXML
-    public Label rTimeLabel;
+    private Label rTimeLabel;
 
     @FXML
-    public Label percentWTimeLabel;
+    private Label percentWTimeLabel;
 
-    public void initialize() {
+    @FXML
+    private void initialize() {
         FileWorker.createFile("withoutBuff.txt");
 
         measure(1);
@@ -74,9 +74,9 @@ public class Lab1Controller {
         float oldWTimePercent = (oldWTime * 100)/ (oldWTime + newWTime);
         float newWTimePercent = (newWTime * 100) / (oldWTime + newWTime);
 
-        oldWTimeLabel.setText("Duration of write method without using buffer: " + customFormat(oldWTime));
-        newWTimeLabel.setText("Duration of write method using buffer: " + customFormat(newWTime));
-        rTimeLabel.setText("Duration of read method: " + customFormat(rTime));
+        oldWTimeLabel.setText("Duration of write method without using buffer: " + customFormat(oldWTime) + " ms");
+        newWTimeLabel.setText("Duration of write method using buffer: " + customFormat(newWTime) + " ms");
+        rTimeLabel.setText("Duration of read method: " + customFormat(rTime) + " ms");
         percentWTimeLabel.setText("Percentage (write without buff/write with buff): " +
                 customFormat(oldWTimePercent) + "% /" + customFormat(newWTimePercent) + "%");
     }
